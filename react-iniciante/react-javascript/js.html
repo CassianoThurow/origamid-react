@@ -1,0 +1,27 @@
+<!-- JavaScript -->
+<div id="app-javascript">
+  <p>Total: <span id="total"></span></p>
+  <p>Preço: R$ <span id="preco"></span></p>
+  <button id="button">Comprar</button>
+</div>
+
+<script type="application/javascript">
+  const button = document.getElementById('button');
+  const total = document.getElementById('total');
+  const preco = document.getElementById('preco');
+
+  let contador = 1;
+
+  function atualizarValores(contador) {
+    total.innerText = contador;
+    preco.innerText = contador * 250;
+  }
+  atualizarValores(contador);
+
+  function handleClick() {
+    contador = contador + 1;
+    atualizarValores(contador + 1);
+  }
+
+  button.addEventListener('click', handleClick);
+</script>
