@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './exercicios/jsxArray-exercicio';
+import App from './events'
 
 
 
