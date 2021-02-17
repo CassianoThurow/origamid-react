@@ -2,8 +2,6 @@ import Header from './header'
 import Footer from './footer'
 import Form from './Form/Form'
 
-
-
 const title = <h1>Esse é o titulo</h1>
 
 const estiloP = { 
