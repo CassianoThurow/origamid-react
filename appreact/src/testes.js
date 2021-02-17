@@ -1,3 +1,8 @@
+import Header from './header'
+import Footer from './footer'
+import Form from './Form/Form'
+
+
 
 const title = <h1>Esse é o titulo</h1>
 
@@ -19,7 +24,7 @@ const  App = () => {
   const active = true
   return (
     <>
-
+    <Header />
     {title}
 
     <p style={estiloP} className={active ? 'active' : 'disabled'}>
@@ -41,8 +46,9 @@ const  App = () => {
           </li>
         ))}
     </ul>
+          <Form />
 
-
+          <Footer />
     </>
   );
 }
