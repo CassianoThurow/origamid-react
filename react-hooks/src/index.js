@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import UseStateResolve from './UseStateResolve';
+import UseStateResolve from './exercicios/useState/UseStateResolve';
 
 
 ReactDOM.render(
