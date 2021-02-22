@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import UseEffectResolve from './exercicios/useEffect/UseEffectResolve';
+import App from './useRef/teste';
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <UseEffectResolve />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
