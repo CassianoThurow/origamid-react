@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './useMemo-useCallback/UseCallback';
+import App from './exercicios/useContext/app';
 
 
 ReactDOM.render(
