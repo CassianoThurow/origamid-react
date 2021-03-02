@@ -1,20 +1,17 @@
-import React from 'react'
-import UseLocalStorage from './useLocalStorage'
+import { useEffect } from 'react'
+import useFetch from './useFetch';
 
- const app = () => {
-     const [ produto, setProduto] = UseLocalStorage('produto', '')
+const App = () => {
+  const { data, loading, error, request } = useFetch();
 
-     function handleClick({target}){
-         setProduto(target.innerText)
-     }
+  useEffect(() => {
+    request('https://ranekapi.origamid.dev/json/api/produto/notebook');
+  }, [request]);
 
-    return (
-        <div>
-            <p>produto prefetido: {produto}</p>
-            <button onClick={handleClick}>notebook</button>
-            <button onClick={handleClick}>smartphone</button>
-        </div>
-    )
-}
+  if (error) return <p>{error}</p>;
+  if (loading) return <p>Carregando...</p>;
+  if (data) return <div>{data.nome}</div>;
+  else return null;
+};
 
-export default app
+export default App;
